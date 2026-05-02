@@ -1,0 +1,7 @@
+{
+    "dataset": "sklearn breast cancer diagnostic dataset",
+    "task": "binary classification of malignant vs benign tumour samples",
+    "positive_class": "malignant",
+    "best_model": "random_forest",
+    "important_boundary": "This is an educational biomarker ML pipeline using a public benchmark dataset. It is not a clinical diagnostic tool."
+}
