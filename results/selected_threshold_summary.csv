@@ -1,0 +1,2 @@
+threshold,true_positives,true_negatives,false_positives,false_negatives,sensitivity_recall,specificity,precision,f1,model
+0.1,52,80,10,1,0.9811320754716981,0.8888888888888888,0.8387096774193549,0.9043478260869565,logistic_regression
