@@ -1,4 +1,4 @@
-﻿# Clinical Biomarker ML Pipeline
+# Clinical Biomarker ML Pipeline
 
 A reproducible Python machine-learning project for binary biomarker classification using a public breast cancer diagnostic dataset.
 
@@ -31,11 +31,15 @@ Because this is a clean benchmark dataset, these results should be interpreted a
   <img src="figures/random_forest_roc_curve.png" alt="Random forest ROC curve" width="600">
 </p>
 
+The random forest model shows strong discrimination between malignant and benign samples on the held-out test set. This supports the model comparison result, but it should not be interpreted as evidence of clinical deployment readiness.
+
 ### Logistic regression ROC curve
 
 <p align="center">
   <img src="figures/logistic_regression_roc_curve.png" alt="Logistic regression ROC curve" width="600">
 </p>
+
+The logistic regression model also shows strong test-set discrimination. Its simpler structure makes it useful as an interpretable baseline against the random forest model.
 
 ### Random forest feature importance
 
@@ -43,20 +47,27 @@ Because this is a clean benchmark dataset, these results should be interpreted a
   <img src="figures/random_forest_feature_importance.png" alt="Random forest feature importance" width="600">
 </p>
 
+The feature-importance plot highlights variables that contributed most to model performance. These results are useful for model interpretation, but should not be treated as causal biological evidence.
+
 ### Logistic regression threshold trade-off
 
 <p align="center">
   <img src="figures/logistic_regression_threshold_tradeoff.png" alt="Logistic regression threshold trade-off" width="600">
 </p>
 
+The threshold plot shows the trade-off between sensitivity and specificity as the classification threshold changes. In a clinical-style setting, this matters because reducing false negatives may be more important than maximising overall accuracy.
+
 ### Probability calibration curve
 
 <p align="center">
   <img src="figures/calibration_curve.png" alt="Probability calibration curve" width="600">
 </p>
+
+The calibration curve assesses whether predicted probabilities align with observed outcomes. This matters because a model can rank samples well while still producing poorly calibrated risk estimates.
+
 ## Important interpretation boundary
 
-This is an educational machine-learning pipeline using a public benchmark dataset. It is not a clinical diagnostic tool and should not be interpreted as medical advice or validated clinical software.
+This is an educational machine-learning pipeline using a public benchmark dataset. It is not a clinical diagnostic tool, medical device or validated diagnostic model.
 
 The purpose is to demonstrate reproducible biomedical ML workflow design, model evaluation, threshold reasoning, calibration analysis and cautious interpretation.
 
@@ -219,10 +230,10 @@ The repository shows practical ability to build, evaluate, interpret and organis
 
 ## References
 
-Breiman, L. (2001) â€˜Random Forestsâ€™, *Machine Learning*, 45(1), pp. 5â€“32. doi: 10.1023/A:1010933404324.
+Breiman, L. (2001) ‘Random Forests’, *Machine Learning*, 45(1), pp. 5–32. doi: 10.1023/A:1010933404324.
 
-Cox, D.R. (1958) â€˜The regression analysis of binary sequencesâ€™, *Journal of the Royal Statistical Society: Series B*, 20(2), pp. 215â€“242.
+Cox, D.R. (1958) ‘The regression analysis of binary sequences’, *Journal of the Royal Statistical Society: Series B*, 20(2), pp. 215–242.
 
-Pedregosa, F. et al. (2011) â€˜Scikit-learn: Machine learning in Pythonâ€™, *Journal of Machine Learning Research*, 12, pp. 2825â€“2830.
+Pedregosa, F. et al. (2011) ‘Scikit-learn: Machine learning in Python’, *Journal of Machine Learning Research*, 12, pp. 2825–2830.
 
 Wolberg, W., Mangasarian, O., Street, N. and Street, W. (1993) *Breast Cancer Wisconsin (Diagnostic)*. UCI Machine Learning Repository. doi: 10.24432/C5DW2B.
