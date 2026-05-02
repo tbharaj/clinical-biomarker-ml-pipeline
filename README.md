@@ -178,15 +178,11 @@ Because this is a clean benchmark dataset, these results should be interpreted a
 
 
 
+## Repository structure
+
 ```text
-
 data/       Processed dataset export
-
 figures/    ROC curves and feature-importance plots
-
 models/     Saved trained models
-
-results/    Model metrics and confusion matrices
-
+results/    Model metrics, metadata and confusion matrices
 scripts/    Python analysis pipeline
-
