@@ -1,4 +1,4 @@
-# Clinical Biomarker ML Pipeline
+﻿# Clinical Biomarker ML Pipeline
 
 A reproducible Python machine-learning project for binary biomarker classification using a public breast cancer diagnostic dataset.
 
@@ -27,24 +27,33 @@ Because this is a clean benchmark dataset, these results should be interpreted a
 
 ### Random forest ROC curve
 
-![Random forest ROC curve](figures/random_forest_roc_curve.png)
+<p align="center">
+  <img src="figures/random_forest_roc_curve.png" alt="Random forest ROC curve" width="600">
+</p>
 
 ### Logistic regression ROC curve
 
-![Logistic regression ROC curve](figures/logistic_regression_roc_curve.png)
+<p align="center">
+  <img src="figures/logistic_regression_roc_curve.png" alt="Logistic regression ROC curve" width="600">
+</p>
 
 ### Random forest feature importance
 
-![Random forest feature importance](figures/random_forest_feature_importance.png)
+<p align="center">
+  <img src="figures/random_forest_feature_importance.png" alt="Random forest feature importance" width="600">
+</p>
 
 ### Logistic regression threshold trade-off
 
-![Logistic regression threshold trade-off](figures/logistic_regression_threshold_tradeoff.png)
+<p align="center">
+  <img src="figures/logistic_regression_threshold_tradeoff.png" alt="Logistic regression threshold trade-off" width="600">
+</p>
 
 ### Probability calibration curve
 
-![Probability calibration curve](figures/calibration_curve.png)
-
+<p align="center">
+  <img src="figures/calibration_curve.png" alt="Probability calibration curve" width="600">
+</p>
 ## Important interpretation boundary
 
 This is an educational machine-learning pipeline using a public benchmark dataset. It is not a clinical diagnostic tool and should not be interpreted as medical advice or validated clinical software.
@@ -210,10 +219,10 @@ The repository shows practical ability to build, evaluate, interpret and organis
 
 ## References
 
-Breiman, L. (2001) ‘Random Forests’, *Machine Learning*, 45(1), pp. 5–32. doi: 10.1023/A:1010933404324.
+Breiman, L. (2001) â€˜Random Forestsâ€™, *Machine Learning*, 45(1), pp. 5â€“32. doi: 10.1023/A:1010933404324.
 
-Cox, D.R. (1958) ‘The regression analysis of binary sequences’, *Journal of the Royal Statistical Society: Series B*, 20(2), pp. 215–242.
+Cox, D.R. (1958) â€˜The regression analysis of binary sequencesâ€™, *Journal of the Royal Statistical Society: Series B*, 20(2), pp. 215â€“242.
 
-Pedregosa, F. et al. (2011) ‘Scikit-learn: Machine learning in Python’, *Journal of Machine Learning Research*, 12, pp. 2825–2830.
+Pedregosa, F. et al. (2011) â€˜Scikit-learn: Machine learning in Pythonâ€™, *Journal of Machine Learning Research*, 12, pp. 2825â€“2830.
 
 Wolberg, W., Mangasarian, O., Street, N. and Street, W. (1993) *Breast Cancer Wisconsin (Diagnostic)*. UCI Machine Learning Repository. doi: 10.24432/C5DW2B.
