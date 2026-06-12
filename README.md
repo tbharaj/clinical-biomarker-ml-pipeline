@@ -214,12 +214,26 @@ This is important because biomedical ML projects should not only optimise model 
 
 ## Interpretability
 
-SHAP was added as an interpretable machine-learning output to show which tumour features contributed most strongly to model predictions.
+SHAP analysis was used to provide model-level interpretability for the logistic-regression classifier.
 
-![SHAP feature importance](figures/shap_summary_plot.png)
+![SHAP summary](figures/shap_summary_plot.png)
 
-Interpretation should remain cautious: SHAP values explain model behaviour on this dataset, but they do not prove biological causality or clinical validity.
+The plot shows the tumour features contributing most strongly to model predictions. SHAP values explain model behaviour on this dataset; they do not prove biological causality or clinical validity.
 
+**Top SHAP-ranked features**
+
+| Feature | Mean absolute SHAP value |
+|---|---|
+| worst texture | 0.922 |
+| radius error | 0.856 |
+| worst radius | 0.738 |
+| worst area | 0.736 |
+| area error | 0.720 |
+| worst concave points | 0.710 |
+| worst symmetry | 0.582 |
+| worst perimeter | 0.578 |
+| mean concave points | 0.545 |
+| mean compactness | 0.537 |
 ## Limitations
 
 The Breast Cancer Wisconsin dataset does not include demographic features such as patient age, race or socioeconomic status. Subgroup fairness analysis was therefore not possible with this dataset. A production clinical model would require demographic stratification and a formal fairness audit prior to deployment (Obermeyer et al., 2019).
