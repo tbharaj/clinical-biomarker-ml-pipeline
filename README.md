@@ -1,3 +1,5 @@
+![Tests](https://github.com/tbharaj/clinical-biomarker-ml-pipeline/actions/workflows/python-checks.yml/badge.svg)
+
 # Clinical Biomarker ML Pipeline
 
 A reproducible Python machine-learning project for binary biomarker classification using a public breast cancer diagnostic dataset.
@@ -181,6 +183,8 @@ tests/                   Automated project tests
 ```
 
 ## Reproducibility
+
+The dataset loads automatically via `sklearn.datasets.load_breast_cancer()` — no separate download required.
 
 Install dependencies:
 

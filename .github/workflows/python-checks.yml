@@ -1,0 +1,25 @@
+﻿name: Tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  repository-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Check repository structure
+        run: |
+          test -f README.md
+          test -f requirements.txt
+          test -d results
+          test -f MODEL_CARD.md
+          echo "Repository structure check passed."
+
+      - name: Check Python syntax
+        run: |
+          python -m compileall .
