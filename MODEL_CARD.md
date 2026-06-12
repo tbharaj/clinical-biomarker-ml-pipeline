@@ -1,4 +1,4 @@
-﻿# Model Card: Clinical Biomarker ML Pipeline
+# Model Card: Clinical Biomarker ML Pipeline
 
 ## Model overview
 
@@ -74,3 +74,13 @@ The models have not been externally validated or prospectively tested.
 Feature importance results are model-interpretation outputs and should not be treated as causal biological evidence.
 
 High performance metrics partly reflect the structured nature of the benchmark dataset and should not be overgeneralised to real-world clinical data.
+
+
+## Fairness and subgroup analysis
+
+The Breast Cancer Wisconsin dataset does not include demographic features such as patient age, race or socioeconomic status. Subgroup fairness analysis was therefore not possible with this dataset. A production clinical model would require demographic stratification and a formal fairness audit prior to deployment (Obermeyer et al., 2019).
+
+
+## Reporting standards
+
+This project follows TRIPOD reporting principles (Collins et al., 2015) as an educational exercise, including: clearly stated aim, outcome definition, model development and evaluation, calibration assessment, and transparent reporting of limitations and non-intended use.

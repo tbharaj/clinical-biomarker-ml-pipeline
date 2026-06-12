@@ -212,7 +212,19 @@ This project includes a `MODEL_CARD.md` file to describe intended use, non-inten
 
 This is important because biomedical ML projects should not only optimise model performance. They should also make model assumptions, risks and limitations explicit.
 
+## Interpretability
+
+SHAP was added as an interpretable machine-learning output to show which tumour features contributed most strongly to model predictions.
+
+![SHAP feature importance](figures/shap_summary_plot.png)
+
+Interpretation should remain cautious: SHAP values explain model behaviour on this dataset, but they do not prove biological causality or clinical validity.
+
 ## Limitations
+
+The Breast Cancer Wisconsin dataset does not include demographic features such as patient age, race or socioeconomic status. Subgroup fairness analysis was therefore not possible with this dataset. A production clinical model would require demographic stratification and a formal fairness audit prior to deployment (Obermeyer et al., 2019).
+
+A production model would also require TRIPOD-compliant reporting before clinical use (Collins et al., 2015).
 
 This project uses a clean public benchmark dataset rather than raw hospital, clinical trial or external validation data.
 
@@ -241,3 +253,11 @@ Cox, D.R. (1958) ‘The regression analysis of binary sequences’, *Journal of 
 Pedregosa, F. et al. (2011) ‘Scikit-learn: Machine learning in Python’, *Journal of Machine Learning Research*, 12, pp. 2825–2830.
 
 Wolberg, W., Mangasarian, O., Street, N. and Street, W. (1993) *Breast Cancer Wisconsin (Diagnostic)*. UCI Machine Learning Repository. doi: 10.24432/C5DW2B.
+
+- Mitchell, M. et al. (2019) 'Model Cards for Model Reporting', Proceedings of the Conference on Fairness, Accountability, and Transparency.
+
+- Van Calster, B. et al. (2019) 'Calibration: the Achilles heel of predictive analytics', BMC Medicine, 17, 230.
+
+- Collins, G.S. et al. (2015) 'Transparent Reporting of a multivariable prediction model for Individual Prognosis Or Diagnosis (TRIPOD): the TRIPOD Statement', Annals of Internal Medicine, 162(1), pp. 55-63.
+
+- Obermeyer, Z., Powers, B., Vogeli, C. and Mullainathan, S. (2019) 'Dissecting racial bias in an algorithm used to manage the health of populations', Science, 366(6464), pp. 447-453.
